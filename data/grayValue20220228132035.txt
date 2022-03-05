@@ -1,4 +1,0 @@
-检测图片路径:E:/temp_pyinstaller/data/result/revise_result			结果存储:E:/temp_pyinstaller/graymean/data/grayValue20220228132035.txt
-==================================================
-图片文件名 		 灰度平均值
-116_O_63599942674899603342.png	108.398

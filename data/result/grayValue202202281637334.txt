@@ -1,4 +1,4 @@
-检测图片路径:E:/temp_pyinstaller/footprint/data/test			结果存储:E:/temp_pyinstaller/graymean/data/grayValue202202281320264.txt
+检测图片路径:E:/temp_pyinstaller/footprint/data/test			结果存储:./data/result/grayValue202202281637334.txt
 ==================================================
 图片文件名 		 灰度平均值
 116_O_63599942674899603342.png	108.398

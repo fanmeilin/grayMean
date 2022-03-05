@@ -1,6 +1,6 @@
-@echo off 
-if "%1" == "h" goto begin 
-mshta vbscript:createobject("wscript.shell").run("%~nx0 h",0)(window.close)&&exit 
-:begin 
+@echo off
+if "%1" == "h" goto begin
+mshta vbscript:createobject("wscript.shell").run("%~nx0 h",0)(window.close)&&exit
+:begin
 
-%CD%\python-embed\python.exe graymean.py 
+"%CD%\python-embed\python.exe" graymean.py
