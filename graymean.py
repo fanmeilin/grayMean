@@ -16,7 +16,7 @@ sys.path.append(cwd)
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QMessageBox
 from grayValue import calImage
-
+from Paintrect import MyMainWindow
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -41,6 +41,9 @@ class Ui_Form(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout.addWidget(self.pushButton_2)
+        self.pushButton_4 = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.verticalLayout.addWidget(self.pushButton_4)
         self.horizontalLayoutWidget = QtWidgets.QWidget(Form)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(50, 220, 232, 61))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
@@ -84,7 +87,7 @@ class Ui_Form(object):
         self.cal_pic_dir = None
         self.grayValue = None
         self.pic_dir = None
-
+        self.demo = MyMainWindow()
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -92,6 +95,7 @@ class Ui_Form(object):
         self.groupBox.setTitle(_translate("Form", "灰度值计算"))
         self.pushButton.setText(_translate("Form", "单图像灰度"))
         self.pushButton_2.setText(_translate("Form", "批文件灰度"))
+        self.pushButton_4.setText(_translate("Form", "局部计算灰度"))
         self.label.setText(_translate("Form", "结果存储于："))
         self.pushButton_3.setText(_translate("Form", ".."))
 
@@ -159,5 +163,6 @@ class MainWnd(Ui_Form, QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainWindow = MainWnd()
+    mainWindow.pushButton_4.clicked.connect(mainWindow.demo.show)
     mainWindow.show()
     sys.exit(app.exec_())
